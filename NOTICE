@@ -1,0 +1,21 @@
+HNCS Daylight for Lightroom
+
+This distribution includes downstream adaptations of public HNCS
+reverse-engineering work from V-Log-Alchemy:
+
+  V-Log-Alchemy
+  https://github.com/shenmintao/V-Log-Alchemy
+  Copyright Shen Min Tao and contributors
+  Licensed under the Apache License, Version 2.0
+
+Modifications and downstream work include conversion of the recovered HNCS
+Daylight color structures to Adobe Creative Profile LookTable form, relative Film
+Tone integration for Lightroom, camera-model-unrestricted profile packaging,
+documentation, and deterministic release validation.
+
+This notice is informational and does not modify the Apache License 2.0 terms in
+LICENSE.
+
+Hasselblad, HNCS, Phocus, Adobe, and Lightroom are trademarks or product names of
+their respective owners. They are used only for reasonable technical reference.
+This project is not affiliated with or endorsed by Hasselblad or Adobe.
