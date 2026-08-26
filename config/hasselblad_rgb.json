@@ -1,0 +1,29 @@
+{
+  "name": "Hasselblad RGB",
+  "white_xy": [
+    0.3457,
+    0.3585
+  ],
+  "rgb_to_xyz": [
+    [
+      0.6491241455,
+      0.188583374,
+      0.1264953613
+    ],
+    [
+      0.2988586426,
+      0.6574554443,
+      0.0436859131
+    ],
+    [
+      0.0046386719,
+      0.0430297852,
+      0.7772369385
+    ]
+  ],
+  "source": {
+    "project": "V-Log-Alchemy",
+    "path": "Tools/hasselblad_x2d100c_standard_cc.json",
+    "license": "Apache-2.0"
+  }
+}

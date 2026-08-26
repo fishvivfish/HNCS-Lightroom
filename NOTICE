@@ -1,21 +1,23 @@
-HNCS Daylight for Lightroom
+HNCS for Lightroom
 
-This distribution includes downstream adaptations of public HNCS
-reverse-engineering work from V-Log-Alchemy:
+Project source code and project-authored documentation are licensed under the
+Apache License, Version 2.0.
 
-  V-Log-Alchemy
-  https://github.com/shenmintao/V-Log-Alchemy
-  Copyright Shen Min Tao and contributors
-  Licensed under the Apache License, Version 2.0
+This project builds on public Hasselblad/Phocus reverse-engineering work from:
 
-Modifications and downstream work include conversion of the recovered HNCS
-Daylight color structures to Adobe Creative Profile LookTable form, relative Film
-Tone integration for Lightroom, camera-model-unrestricted profile packaging,
-documentation, and deterministic release validation.
+V-Log-Alchemy
+https://github.com/shenmintao/V-Log-Alchemy
+Shen Min Tao and contributors
+Apache License, Version 2.0
 
-This notice is informational and does not modify the Apache License 2.0 terms in
-LICENSE.
+The Sony ILCE-7RM5 HNCS Base DCP is a derived interoperability profile. It keeps
+the Adobe Standard first-stage camera rendering required by the pipeline and adds
+the project's WB-dependent HNCS carrier/HueSatMap data. The standalone original
+Adobe Standard DCP is not distributed here.
 
-Hasselblad, HNCS, Phocus, Adobe, and Lightroom are trademarks or product names of
-their respective owners. They are used only for reasonable technical reference.
-This project is not affiliated with or endorsed by Hasselblad or Adobe.
+Raw proprietary Phocus binaries and raw recovered Phocus WB dumps are not
+distributed here.
+
+Hasselblad, HNCS, Phocus, Adobe, Lightroom and Sony product names are used only
+for technical identification and interoperability. This project is unofficial
+and is not affiliated with or endorsed by those companies.

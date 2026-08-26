@@ -1,81 +1,68 @@
-# HNCS Daylight for Lightroom
+# HNCS for Lightroom
 
-Two unofficial Lightroom Creative Profiles that bring the publicly recovered
-HNCS Daylight color transform and Film Tone to a non-destructive RAW workflow.
+Unofficial HNCS colour profiles for Adobe Lightroom.
 
 ## Profiles
 
-| Profile | Rendering | Recommended use |
-| --- | --- | --- |
-| [HNCS Daylight Color](profiles/HNCS%20Daylight%20Color.xmp) | HNCS Daylight color | Lightroom editing |
-| [HNCS Daylight](profiles/HNCS%20Daylight.xmp) | HNCS Daylight color + Film Tone | More finished rendering |
+### Sony ILCE-7RM5 / A7R V
 
-## Installation
+Use both files in `profiles/sony-ilce-7rm5/`:
 
-1. Download one or both XMP files from [`profiles`](profiles/).
-2. Open Lightroom's profile management or profile import interface. The wording
-   varies by Lightroom version and platform.
-3. Import each XMP as a Creative Profile.
-4. Select **HNCS Daylight Color** or **HNCS Daylight** from Profiles.
+- `HNCS Base - ILCE-7RM5.dcp`
+- `HNCS Color.xmp`
 
-Both profiles use Adobe Standard as their base. They do not set white balance,
-Exposure, Basic-panel edits, HSL adjustments, masks, or local adjustments.
+Select **HNCS Color** in Lightroom. `HNCS Base` is the technical camera profile,
+not the final look by itself.
 
-## How it works
+### Daylight
 
-The profiles use the publicly recovered HNCS Daylight numerical transform from
-[V-Log-Alchemy](https://github.com/shenmintao/V-Log-Alchemy). The color transform
-is expressed as a general RGB mapping in a Lightroom Creative Profile. The full
-profile also applies the reconstructed HNCS Film Tone through a relative tone
-transform.
+- `profiles/HNCS Daylight Color.xmp`
+- `profiles/HNCS Daylight.xmp`
+
+These are fixed-Daylight Creative Profiles.
+
+## Pipeline
 
 ```text
-Camera RAW
-  -> Adobe camera-specific RAW interpretation
-  -> Adobe Standard
-  -> HNCS Daylight color transform
-  -> optional HNCS Film Tone
-  -> Lightroom output
+RAW
+-> Adobe Standard camera rendering
+-> WB-dependent HNCS colour transform
+-> Lightroom
 ```
 
-See [Technical Overview](docs/TECHNICAL.md) for implementation details.
+The Sony/Adobe camera profile remains the first-stage colour restoration.
+HNCS is applied as the second-stage colour rendering.
 
-## Compatibility
+## Rebuild
 
-The profiles are not restricted to a specific camera model. Current photographic
-validation covers Sony A7R V / ILCE-7RM5 RAW files in Adobe Lightroom for
-Android.
+The repository includes the final Sony ILCE-7RM5 carrier/HSM payload in
+`data/sony-ilce-7rm5/final_profile_payload.npz`.
 
-## Lighting
+Place your locally installed `Sony ILCE-7RM5 Adobe Standard.dcp` in
+`local_assets/`, then run:
 
-The current implementation covers the HNCS Daylight family: daylight, cloudy,
-shade, and normal white-light environments. Very warm, narrow-spectrum, or
-strongly mixed lighting is less well covered.
+```bash
+python tools/build_profile.py
+```
+
+The original Adobe DCP and raw Phocus extraction data are not included.
 
 ## Validation
 
-The HNCS Daylight color transform was numerically checked against the upstream reference over 35,937 samples.
+The Sony ILCE-7RM5 profile was validated from 2400 K to 10000 K at 1 K spacing,
+over EV -3 to +3, and tested in Lightroom for Android.
 
-## Limitations
-
-- Warm and tungsten HNCS ColorCorrect numerical assets are not included in the
-  current public upstream release.
-- Lightroom supplies the camera-specific RAW interpretation and Adobe Standard
-  characterization.
-- The color transform is carried through Adobe's Creative Profile LookTable.
-- Some proprietary Phocus highlight and perceptual gamut behavior is outside the
-  public reconstruction.
+See `docs/TECHNICAL.md`, `docs/BUILD.md`, and `docs/VALIDATION_ILCE7RM5.md`.
 
 ## Credits
 
-[V-Log-Alchemy](https://github.com/shenmintao/V-Log-Alchemy), by Shen Min Tao and
-contributors, provides the public Hasselblad/Phocus reverse-engineering work and
-recovered HNCS numerical assets used by this project.
+HNCS/Phocus reverse-engineering work builds on
+[V-Log-Alchemy](https://github.com/shenmintao/V-Log-Alchemy).
 
-This project is unofficial and is not affiliated with or endorsed by Hasselblad
-or Adobe.
+This project is unofficial and is not affiliated with or endorsed by
+Hasselblad, Adobe, or Sony.
 
 ## License
 
-Licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for
-upstream attribution and modification information.
+Project source code and project-authored material are licensed under Apache-2.0.
+See `NOTICE` for third-party attribution.

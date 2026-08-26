@@ -1,0 +1,56 @@
+{
+  "profile": "HNCS Color",
+  "camera_model": "Sony ILCE-7RM5",
+  "reference_adobe_dcp": {
+    "bytes": 120692,
+    "distributed": false
+  },
+  "carrier": {
+    "descriptors_stored_roundtrip": [
+      {
+        "temperature_K": 2411.460588490603,
+        "tint": 22.569589919305802
+      },
+      {
+        "temperature_K": 6922.620499526681,
+        "tint": -44.657235602295536
+      },
+      {
+        "temperature_K": 16689.829826358407,
+        "tint": 7.210543912987894
+      }
+    ],
+    "coefficients": [
+      0.9631451483491424,
+      0.3519905615000886,
+      4.862666740688796e-18
+    ]
+  },
+  "numerical_checkpoint": {
+    "hsm_dims": [
+      72,
+      32,
+      32
+    ],
+    "p": 0.53,
+    "ev_stops": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "anchor_K": 5550,
+    "adobe_base_epsilon": 0.004
+  },
+  "full_audit": {
+    "temperature_start_K": 2400,
+    "temperature_end_K": 10000,
+    "temperature_step_K": 1,
+    "test_grid_seed": 260237,
+    "test_grid_samples": 1458,
+    "adobe_base_samples_per_K": 40000
+  }
+}

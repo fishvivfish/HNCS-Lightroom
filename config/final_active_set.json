@@ -1,0 +1,30 @@
+{
+  "classification": "FINAL ILCE-7RM5 EXCHANGE ACTIVE SET",
+  "temperature_domain_K": [
+    2400,
+    10000
+  ],
+  "hard_anchor_K": 5550,
+  "active_temperatures_K": [
+    2400,
+    2442,
+    2998,
+    3072,
+    3100,
+    3359,
+    3381,
+    3636,
+    3751,
+    4052,
+    4092,
+    4325,
+    5500,
+    5550,
+    6500,
+    7325,
+    9100,
+    9382,
+    10000
+  ],
+  "note": "Frozen workset used by the final adaptive refinement. It was derived from the preceding exhaustive audit/exchange cycle; the final profile was subsequently re-audited at every integer Kelvin."
+}
