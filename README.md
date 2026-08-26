@@ -53,7 +53,7 @@ The original Adobe DCP and raw Phocus extraction data are not included.
 The Sony ILCE-7RM5 profile was validated from 2400 K to 10000 K at 1 K spacing,
 over EV -3 to +3, and tested in Lightroom for Android.
 
-See `docs/TECHNICAL.md`, `docs/BUILD.md`, and `docs/VALIDATION_ILCE7RM5.md`.
+See `docs/ALGORITHM.md`, `docs/TECHNICAL.md`, `docs/BUILD.md`, and `docs/VALIDATION_ILCE7RM5.md`.
 
 ## Credits
 
