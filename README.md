@@ -9,9 +9,10 @@ Unofficial HNCS colour profiles for Adobe Lightroom.
 Use both files in `profiles/sony-ilce-7rm5/`:
 
 - `HNCS Base - ILCE-7RM5.dcp`
-- `HNCS Color.xmp`
+- `HNCS Color.xmp` — HNCS colour only
+- `HNCS.xmp` — HNCS colour + Film Tone
 
-Select **HNCS Color** in Lightroom. `HNCS Base` is the technical camera profile,
+Select **HNCS Color** or **HNCS** in Lightroom. `HNCS Base` is the technical camera profile,
 not the final look by itself.
 
 ### Daylight
